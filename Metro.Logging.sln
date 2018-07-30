@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{F218E2B9-714B-497B-AB33-6CE30BD8DB45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9227BD53-9FE8-400C-97D7-33EC27414911}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metro.Logging.Abstract", "src\Metro.Logging.Abstract\Metro.Logging.Abstract.csproj", "{B5484AA2-2F2C-4161-8723-3F8A45937B43}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metro.Logging.File", "src\Metro.Logging.File\Metro.Logging.File.csproj", "{DB9A6426-F1E1-4280-9EA1-AF32E2099501}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metro.Logging.File.UI", "src\Metro.Logging.File.UI\Metro.Logging.File.UI.csproj", "{A6104C2C-2717-4A7B-BDAB-BC482B40C6E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metro.Logging.File.Sample", "samples\Metro.Logging.File.Sample\Metro.Logging.File.Sample.csproj", "{54CCFC5E-9EEE-414F-B7B8-A9298F2E32C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5484AA2-2F2C-4161-8723-3F8A45937B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5484AA2-2F2C-4161-8723-3F8A45937B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5484AA2-2F2C-4161-8723-3F8A45937B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5484AA2-2F2C-4161-8723-3F8A45937B43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB9A6426-F1E1-4280-9EA1-AF32E2099501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB9A6426-F1E1-4280-9EA1-AF32E2099501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB9A6426-F1E1-4280-9EA1-AF32E2099501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB9A6426-F1E1-4280-9EA1-AF32E2099501}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6104C2C-2717-4A7B-BDAB-BC482B40C6E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6104C2C-2717-4A7B-BDAB-BC482B40C6E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6104C2C-2717-4A7B-BDAB-BC482B40C6E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6104C2C-2717-4A7B-BDAB-BC482B40C6E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54CCFC5E-9EEE-414F-B7B8-A9298F2E32C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54CCFC5E-9EEE-414F-B7B8-A9298F2E32C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54CCFC5E-9EEE-414F-B7B8-A9298F2E32C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54CCFC5E-9EEE-414F-B7B8-A9298F2E32C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B5484AA2-2F2C-4161-8723-3F8A45937B43} = {9227BD53-9FE8-400C-97D7-33EC27414911}
+		{DB9A6426-F1E1-4280-9EA1-AF32E2099501} = {9227BD53-9FE8-400C-97D7-33EC27414911}
+		{A6104C2C-2717-4A7B-BDAB-BC482B40C6E3} = {9227BD53-9FE8-400C-97D7-33EC27414911}
+		{54CCFC5E-9EEE-414F-B7B8-A9298F2E32C8} = {F218E2B9-714B-497B-AB33-6CE30BD8DB45}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C496F4A-FC3D-4B54-80DE-47698B7732F2}
+	EndGlobalSection
+EndGlobal
