@@ -1,9 +1,7 @@
-
 using System;
 
 namespace Microsoft.Extensions.Logging.File
 {
-
     public partial class FileLogger : ILogger
     {
         private readonly Func<string, LogLevel, bool> _filter;
@@ -18,7 +16,6 @@ namespace Microsoft.Extensions.Logging.File
             _name = string.IsNullOrEmpty(name) ? nameof(FileLogger) : name;
             _filter = filter ?? ((category, logLevel) => true);
         }
-
 
         public IDisposable BeginScope<TState>(TState state)
         {

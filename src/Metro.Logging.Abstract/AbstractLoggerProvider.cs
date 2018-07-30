@@ -7,7 +7,7 @@ namespace Microsoft.Extensions.Logging.Abstract
     public class AbstractLoggerProvider : ILoggerProvider
     {
         private readonly Func<string, LogLevel, bool> _filter;
-        ILoggerWriter _loggerWriter;
+        private ILoggerWriter _loggerWriter;
 
         public AbstractLoggerProvider(ILoggerWriter loggerWriter)
         {

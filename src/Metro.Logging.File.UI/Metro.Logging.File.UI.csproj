@@ -3,6 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+    <PackageProjectUrl>https://github.com/gorillazliuzhe/Metro.Logging</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/gorillazliuzhe/Metro.Logging</RepositoryUrl>
+    <Copyright>MIT</Copyright>
+    <Company>Metro</Company>
+    <Authors>Metro</Authors>
+    <Description>配合Metro.Logging.File，零配置的在线日志查看插件</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.1" />

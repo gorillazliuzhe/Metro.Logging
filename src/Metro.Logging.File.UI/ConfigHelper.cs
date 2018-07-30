@@ -1,16 +1,14 @@
 ﻿using Metro.Logging.File.UI.Models;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace Metro.Logging.File.UI
 {
     public static class ConfigHelper
     {
-        readonly static string _dir = Path.Combine(AppContext.BaseDirectory, "logs");
-        readonly static string _path;
+        private static readonly string _dir = Path.Combine(AppContext.BaseDirectory, "logs");
+        private static readonly string _path;
 
         static ConfigHelper()
         {

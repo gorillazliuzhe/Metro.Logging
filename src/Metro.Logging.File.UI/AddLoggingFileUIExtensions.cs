@@ -1,7 +1,4 @@
 ﻿using Metro.Logging.File.UI;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Microsoft.Extensions.DependencyInjection
 {

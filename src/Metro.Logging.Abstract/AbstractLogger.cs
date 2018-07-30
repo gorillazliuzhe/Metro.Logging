@@ -3,7 +3,6 @@ using System;
 
 namespace Microsoft.Extensions.Logging.Abstract
 {
-
     public partial class AbstractLogger : ILogger
     {
         private readonly Func<string, LogLevel, bool> _filter;

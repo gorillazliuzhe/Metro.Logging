@@ -1,12 +1,10 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Metro.Logging.File.UI.Areas.Logging.Pages
 {
@@ -22,7 +20,6 @@ namespace Metro.Logging.File.UI.Areas.Logging.Pages
 
         public IActionResult OnGet()
         {
-           
             //ViewData["scheme"] = HttpContext.Request.Scheme;
             //ViewData["host"] = HttpContext.Request.Host;
             //ViewData["path"] = HttpContext.Request.Path;
@@ -44,6 +41,5 @@ namespace Metro.Logging.File.UI.Areas.Logging.Pages
 
             return Page();
         }
-
     }
 }

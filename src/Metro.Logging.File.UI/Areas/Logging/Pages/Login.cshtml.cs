@@ -1,11 +1,8 @@
 using Metro.Logging.File.UI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Newtonsoft.Json;
 using System;
-using System.IO;
 using System.Security.Cryptography;
-using System.Text;
 
 namespace Metro.Logging.File.UI.Areas.Logging.Pages
 {
@@ -20,7 +17,6 @@ namespace Metro.Logging.File.UI.Areas.Logging.Pages
 
         public string Tip { get; set; } = string.Empty;
 
-
         public void OnGet()
         {
             if (ConfigHelper.Get() == null)
@@ -29,6 +25,7 @@ namespace Metro.Logging.File.UI.Areas.Logging.Pages
                 Btn = "±£´æ";
             }
         }
+
         public IActionResult OnPost()
         {
             var config = ConfigHelper.Get();

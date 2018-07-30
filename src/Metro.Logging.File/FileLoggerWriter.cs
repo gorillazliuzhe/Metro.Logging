@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading;
@@ -10,11 +9,10 @@ namespace Microsoft.Extensions.Logging.File
 {
     public class FileLoggerWriter
     {
-        static object _locker = new object();
+        private static object _locker = new object();
         internal ConcurrentQueue<string> _queue = new ConcurrentQueue<string>();
         public CancellationTokenSource CancellationToken => new CancellationTokenSource();
-        readonly string _logDir = Path.Combine(AppContext.BaseDirectory, "logs");
-
+        private readonly string _logDir = Path.Combine(AppContext.BaseDirectory, "logs");
 
         public static FileLoggerWriter _fileLoggerWriter;
 
@@ -57,7 +55,6 @@ namespace Microsoft.Extensions.Logging.File
                     }
                     catch (Exception)
                     {
-
                     }
                 }
             });
@@ -100,7 +97,7 @@ namespace Microsoft.Extensions.Logging.File
             _queue.Enqueue(logBuilder.ToString());
         }
 
-        void CreateLogDir()
+        private void CreateLogDir()
         {
             if (!Directory.Exists(_logDir)) Directory.CreateDirectory(_logDir);
         }

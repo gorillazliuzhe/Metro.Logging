@@ -5,7 +5,6 @@ using System;
 
 namespace Microsoft.Extensions.Logging
 {
-
     public static class AbstractLoggerFactoryExtensions
     {
         public static ILoggingBuilder AddAbstract<T>(this ILoggingBuilder builder) where T : class, ILoggerWriter
