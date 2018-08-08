@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <TieredCompilation>true</TieredCompilation>
     <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
     <PackageProjectUrl>https://github.com/gorillazliuzhe/Metro.Logging</PackageProjectUrl>
     <RepositoryUrl>https://github.com/gorillazliuzhe/Metro.Logging</RepositoryUrl>
