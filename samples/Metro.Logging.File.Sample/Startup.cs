@@ -19,6 +19,7 @@ namespace Metro.Logging.File.Sample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddLoggingFileUI();
+            services.AddRazorPages();
             services.AddControllersWithViews();
         }
 
@@ -39,6 +40,7 @@ namespace Metro.Logging.File.Sample
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

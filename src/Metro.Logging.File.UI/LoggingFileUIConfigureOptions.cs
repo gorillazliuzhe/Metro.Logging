@@ -9,12 +9,12 @@ namespace Metro.Logging.File.UI
 {
     internal class LoggingFileUIConfigureOptions : IPostConfigureOptions<StaticFileOptions>
     {
-        public LoggingFileUIConfigureOptions(IHostingEnvironment environment)
+        public LoggingFileUIConfigureOptions(IWebHostEnvironment environment)
         {
             Environment = environment;
         }
 
-        public IHostingEnvironment Environment { get; }
+        public IWebHostEnvironment Environment { get; }
 
         public void PostConfigure(string name, StaticFileOptions options)
         {

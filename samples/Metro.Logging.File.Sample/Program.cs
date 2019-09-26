@@ -16,8 +16,9 @@ namespace Metro.Logging.File.Sample
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args).ConfigureWebHostDefaults(webBuilder =>
             {
-                webBuilder.ConfigureLogging(builder => builder.AddFile());
+                //webBuilder.UseStaticWebAssets();
                 webBuilder.UseStartup<Startup>();
+                webBuilder.ConfigureLogging(builder => builder.AddFile());
             });
     }
 }
