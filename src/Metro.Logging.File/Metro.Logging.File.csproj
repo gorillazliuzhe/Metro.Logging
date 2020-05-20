@@ -13,6 +13,7 @@
     <RepositoryType>github</RepositoryType>
     <PackageProjectUrl>https://github.com/gorillazliuzhe/Metro.Logging</PackageProjectUrl>
     <Copyright>MIT</Copyright>
+    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
   </PropertyGroup>
 
   <ItemGroup>
