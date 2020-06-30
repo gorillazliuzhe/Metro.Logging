@@ -20,11 +20,11 @@ namespace Metro.Logging.File.UI.Areas.Logging.Pages
 
         public IActionResult OnGet()
         {
-            //ViewData["scheme"] = HttpContext.Request.Scheme;
-            //ViewData["host"] = HttpContext.Request.Host;
-            //ViewData["path"] = HttpContext.Request.Path;
-            //bool login = AuthHelper.Check(HttpContext);
-            //if (!login) return RedirectToPage("Login");
+            ViewData["scheme"] = HttpContext.Request.Scheme;
+            ViewData["host"] = HttpContext.Request.Host;
+            ViewData["path"] = HttpContext.Request.Path;
+            bool login = AuthHelper.Check(HttpContext);
+            if (!login) return RedirectToPage("Login");
 
             string logsPath = Path.Combine(AppContext.BaseDirectory, "logs");
             string[] files = Directory.GetFiles(logsPath);

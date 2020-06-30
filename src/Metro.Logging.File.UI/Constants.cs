@@ -2,6 +2,6 @@
 {
     internal class Constants
     {
-        public const string CookieName = "huanent_logging_file_ui";
+        public const string CookieName = "metro_logging_file_ui";
     }
 }

@@ -1,5 +1,5 @@
 ﻿using Metro.Logging.File.UI.Models;
-//using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.IO;
 
@@ -22,14 +22,14 @@ namespace Metro.Logging.File.UI
         public static ConfigModel Get()
         {
             if (!System.IO.File.Exists(_path)) return null;
-            return System.Text.Json.JsonSerializer.Deserialize<ConfigModel>(System.IO.File.ReadAllText(_path));
-            //return JsonConvert.DeserializeObject<ConfigModel>(System.IO.File.ReadAllText(_path));
+            //return System.Text.Json.JsonSerializer.Deserialize<ConfigModel>(System.IO.File.ReadAllText(_path));
+            return JsonConvert.DeserializeObject<ConfigModel>(System.IO.File.ReadAllText(_path));
         }
 
         public static void Save(ConfigModel config)
         {
-            System.IO.File.WriteAllText(_path, System.Text.Json.JsonSerializer.Serialize(config));
-            //System.IO.File.WriteAllText(_path, JsonConvert.SerializeObject(config));
+            //System.IO.File.WriteAllText(_path, System.Text.Json.JsonSerializer.Serialize(config));
+            System.IO.File.WriteAllText(_path, JsonConvert.SerializeObject(config));
         }
     }
 }

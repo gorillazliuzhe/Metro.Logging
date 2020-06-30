@@ -19,8 +19,8 @@ namespace Metro.Logging.File.UI.Areas.Logging.Pages
 
         public IActionResult OnGet()
         {
-            //bool login = AuthHelper.Check(HttpContext);
-            //if (!login) return RedirectToPage("Login");
+            bool login = AuthHelper.Check(HttpContext);
+            if (!login) return RedirectToPage("Login");
 
             string filePath = Path.Combine(AppContext.BaseDirectory, "logs", $"{Name}.txt");
             string text;
