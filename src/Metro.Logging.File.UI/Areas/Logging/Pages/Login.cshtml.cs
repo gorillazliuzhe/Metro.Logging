@@ -53,7 +53,7 @@ namespace Metro.Logging.File.UI.Areas.Logging.Pages
             }
             else
             {
-                var rijndaelManaged = Rijndael.Create();
+                var rijndaelManaged = Aes.Create();
                 rijndaelManaged.Mode = CipherMode.ECB;
                 rijndaelManaged.Padding = PaddingMode.PKCS7;
                 rijndaelManaged.GenerateKey();
