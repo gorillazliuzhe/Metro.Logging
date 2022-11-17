@@ -15,12 +15,10 @@ namespace Metro.Logging.File.UI
         public static string Encrypt(string encryptStr, byte[] key)
         {
             byte[] toEncryptArray = Encoding.UTF8.GetBytes(encryptStr);
-            var rDel = new RijndaelManaged
-            {
-                Key = key,
-                Mode = CipherMode.ECB,
-                Padding = PaddingMode.PKCS7
-            };
+            var rDel = Aes.Create();
+            rDel.Key = key;
+            rDel.Mode = CipherMode.ECB;
+            rDel.Padding = PaddingMode.PKCS7;
             var cTransform = rDel.CreateEncryptor();
             byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
             return Convert.ToBase64String(resultArray, 0, resultArray.Length);
@@ -35,12 +33,10 @@ namespace Metro.Logging.File.UI
         public static string Decrypt(string decryptStr, byte[] key)
         {
             byte[] toEncryptArray = Convert.FromBase64String(decryptStr);
-            var rDel = new RijndaelManaged
-            {
-                Key = key,
-                Mode = CipherMode.ECB,
-                Padding = PaddingMode.PKCS7
-            };
+            var rDel = Aes.Create();
+            rDel.Key = key;
+            rDel.Mode = CipherMode.ECB;
+            rDel.Padding = PaddingMode.PKCS7;
             var cTransform = rDel.CreateDecryptor();
             byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
             return Encoding.UTF8.GetString(resultArray);
