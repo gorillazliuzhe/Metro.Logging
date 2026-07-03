@@ -28,16 +28,15 @@ namespace Metro.Logging.File.UI.Areas.Logging.Pages
 
             string logsPath = Path.Combine(AppContext.BaseDirectory, "logs");
             string[] files = Directory.GetFiles(logsPath);
-            files = files.Select(s => Path.GetFileNameWithoutExtension(s)).ToArray();
+            files = [.. files.Select(s => Path.GetFileNameWithoutExtension(s))];
             int startDate = StartDate.Year * 10000 + StartDate.Month * 100 + StartDate.Day;
             int endDate = EndDate.Year * 10000 + EndDate.Month * 100 + EndDate.Day;
 
-            LogItems = files
+            LogItems = [.. files
                 .Where(w => new Regex("^[0-9]{8}$").IsMatch(w))
                 .Select(s => Convert.ToInt32(s))
                 .Where(w => w >= startDate && w <= endDate)
-                .OrderByDescending(o => o)
-                .ToArray();
+                .OrderByDescending(o => o)];
 
             return Page();
         }

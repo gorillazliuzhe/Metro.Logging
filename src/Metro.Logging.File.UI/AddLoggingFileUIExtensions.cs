@@ -6,7 +6,7 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static void AddLoggingFileUI(this IServiceCollection services)
         {
-            services.ConfigureOptions(typeof(LoggingFileUIConfigureOptions));
+            services.ConfigureOptions<LoggingFileUIConfigureOptions>();
         }
     }
 }
