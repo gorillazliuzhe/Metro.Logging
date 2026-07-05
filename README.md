@@ -1,5 +1,5 @@
 # Metro.Logging
-更新到.net core 3.0
+更新到.net 10.0
 使用方法
 
 Program文件 
@@ -23,4 +23,4 @@ appsettings.json文件
       }
     }
   }
-就可以兼容 asp.net core 3.0
+就可以兼容 asp.net 10.0
